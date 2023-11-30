@@ -6,7 +6,7 @@ public class Palindrome {
 	
 	public static void main (String[] args) {
 
-  	String reader;
+  	
   	System.out.print("Enter a word: ");
   	Parser parser = new Parser();
   	palindrome(parser.getStringInput());
