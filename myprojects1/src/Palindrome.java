@@ -3,7 +3,8 @@ public class Palindrome {
 	
 	public static void main (String[] args) {
 		
-	
+	//I want to refactor this to try inheritance instead.
+		
 	System.out.print("Enter a word or Q to quit.");
 	Parser parser = new Parser();
 	String input = parser.getStringInput();
