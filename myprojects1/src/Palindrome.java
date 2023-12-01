@@ -1,31 +1,43 @@
-/**
-* Application to check if a word is a palindrome.
-*/
 
 public class Palindrome {
 	
 	public static void main (String[] args) {
-
-  	
-  	System.out.print("Enter a word: ");
-  	Parser parser = new Parser();
-  	palindrome(parser.getStringInput());
 		
+	
+	System.out.print("Enter a word or Q to quit.");
+	Parser parser = new Parser();
+	String input = parser.getStringInput();
+	
+	
+	while (parser.continuing) {
+		if (input.equals("Q")) {
+			parser.end();
+			System.out.println("The scanner has closed. Goodbye!");
+			break;
+			}
+		palindrome(input);
+		input = parser.getStringInput();	
 	}
 	
-	public static void palindrome (String input) {
 	
-        System.out.println("String input: " + input);	
-        System.out.println("Reversed string output: " + reverse(input));
-        
-        if (checkPalindrome(input)) {
-            System.out.println("The word '" + input + "' is a palindrome.");
-        }else {
-            System.out.println("The word '" + input + "' is not a palindrome.");
-        }
-    }
-
-    /**
+}
+	
+	public static void palindrome (String input) {
+		
+	System.out.println("String input: " + input);
+	
+	
+	System.out.println("Reversed string output: " + reverse(input));
+	
+	if (checkPalindrome(input)) {
+		System.out.println("The word '" + input + "' is a palindrome.");
+	}else {
+		System.out.println("The word '" + input + "' is not a palindrome.");
+	}
+	System.out.print("Enter another word or Q to quit.");
+	}
+		
+	/**
 	 * Method to reverse the string	
 	 */
 	
@@ -48,4 +60,5 @@ public class Palindrome {
 		return true;}
 		return false;
 	}
+	
 }
