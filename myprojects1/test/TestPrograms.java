@@ -1,4 +1,5 @@
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class TestPrograms {
@@ -34,4 +35,18 @@ public class TestPrograms {
 		assertEquals(6875, IntegerPalindrome.reverserec(5786));
 	
 	}
+
+//Test PrimeNumber class
+@Test
+public void testPrimeNumber(){
+   assertFalse(PrimeNumber.isPrime(4));
+
+   assertFalse(PrimeNumber.isPrime(82));
+
+   assertTrue(PrimeNumber.isPrime(5));
+
+   assertTrue(PrimeNumber.isPrime(101));
+   
+   assertTrue(PrimeNumber.isPrime(3));
+}
 }
